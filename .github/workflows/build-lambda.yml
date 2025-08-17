@@ -1,8 +1,9 @@
-name: Build Lambda ZIP
+name: Build Lambda ZIP and Release
 
 on:
-  release:
-    types: [ published ]
+  push:
+    tags:
+      - '*'
 
 permissions:
   contents: write
@@ -41,19 +42,12 @@ jobs:
           cd dist
           zip -9 lambda.zip bootstrap
 
-      - name: Upload artifact (lambda.zip)
-        uses: actions/upload-artifact@v4
-        with:
-          name: lambda-amd64-zip-${{ github.event.release.tag_name }}
-          path: dist/lambda.zip
-          if-no-files-found: error
-
-      - name: Upload release asset (lambda.zip)
+      - name: Create GitHub Release and Upload Asset
         uses: softprops/action-gh-release@v2
         with:
+          name: ${{ github.ref_name }}
+          tag_name: ${{ github.ref }}
           files: |
             dist/lambda.zip
-          name: lambda-amd64-zip-${{ github.event.release.tag_name }}
-          tag_name: ${{ github.event.release.tag_name }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

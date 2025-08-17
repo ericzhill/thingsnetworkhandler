@@ -57,38 +57,9 @@ data "http" "latest_release" {
   }
 }
 
-locals {
-  release = jsondecode(data.http.latest_release.response_body)
-  # Find the lambda.zip asset from the latest release
-  asset_urls       = [for a in local.release.assets : a.browser_download_url if a.name == "lambda.zip"]
-  lambda_asset_url = length(local.asset_urls) > 0 ? local.asset_urls[0] : ""
-
-  function_name = "${random_pet.prefix.id}-thingsnetworkhandler"
-  role_name     = "${random_pet.prefix.id}-thingsnetworkhandler-role"
-  policy_name   = "${random_pet.prefix.id}-thingsnetworkhandler-policy"
-  bucket_name   = lower(replace("${random_pet.prefix.id}-${random_id.bucket_suffix.hex}-lambda-artifacts", "_", "-"))
-}
-
-# Fail early if the asset isn't found
-locals {
-  _assert_has_asset = length(local.lambda_asset_url) > 0 ? true : tobool("Asset 'lambda.zip' not found on the latest release")
-}
-
-# Download the lambda.zip asset (public download URL)
-# Note: Release assets on public repos are accessible without auth via browser_download_url
-# We request octet-stream to get the raw file instead of JSON
-# This data source keeps the content in memory for use below.
-data "http" "lambda_zip" {
-  url = local.lambda_asset_url
-
-  request_headers = {
-    Accept = "application/octet-stream"
-  }
-}
-
 # Bucket to stage the Lambda artifact
 resource "aws_s3_bucket" "artifacts" {
-  bucket = local.bucket_name
+  bucket = lower(replace("${random_pet.prefix.id}-${random_id.bucket_suffix.hex}-lambda-artifacts", "_", "-"))
 }
 
 resource "aws_s3_bucket_public_access_block" "this" {
@@ -102,14 +73,14 @@ resource "aws_s3_bucket_public_access_block" "this" {
 # Upload the artifact to S3 using the downloaded body
 resource "aws_s3_object" "lambda_zip" {
   bucket         = aws_s3_bucket.artifacts.id
-  key            = "${local.function_name}/lambda.zip"
-  content_base64 = base64encode(data.http.lambda_zip.response_body)
+  key            = "${aws_lambda_function.this.function_name}/lambda.zip"
+  content_base64 = base64encode(data.http.latest_release.response_body)
   content_type   = "application/zip"
 }
 
 # IAM role for Lambda
 resource "aws_iam_role" "lambda_exec" {
-  name = local.role_name
+  name = "${random_pet.prefix.id}-thingsnetworkhandler-role"
   assume_role_policy = jsonencode({
     Version = "2012-10-17",
     Statement = [
@@ -132,13 +103,13 @@ resource "aws_iam_role_policy_attachment" "cw_logs" {
 
 # Explicit log group for the Lambda, named with the random pet prefix
 resource "aws_cloudwatch_log_group" "lambda" {
-  name              = "/aws/lambda/${local.function_name}"
+  name              = "/aws/lambda/${aws_lambda_function.this.function_name}"
   retention_in_days = 14
 }
 
 # Create the Lambda function from the S3 object
 resource "aws_lambda_function" "this" {
-  function_name = local.function_name
+  function_name = "${random_pet.prefix.id}-thingsnetworkhandler"
   role          = aws_iam_role.lambda_exec.arn
   runtime       = "provided.al2"
   handler       = "bootstrap"
@@ -148,7 +119,7 @@ resource "aws_lambda_function" "this" {
   s3_key    = aws_s3_object.lambda_zip.key
 
   # Provide source code hash so updates are detected
-  source_code_hash = base64sha256(data.http.lambda_zip.response_body)
+  # source_code_hash = base64sha256(data.http.lambda_zip.response_body)
 
   environment {
     variables = {
