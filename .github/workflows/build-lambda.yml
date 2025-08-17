@@ -5,7 +5,7 @@ on:
     types: [ published ]
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -47,3 +47,13 @@ jobs:
           name: lambda-amd64-zip-${{ github.event.release.tag_name }}
           path: dist/lambda.zip
           if-no-files-found: error
+
+      - name: Upload release asset (lambda.zip)
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/lambda.zip
+          name: lambda-amd64-zip-${{ github.event.release.tag_name }}
+          tag_name: ${{ github.event.release.tag_name }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
