@@ -1,0 +1,1478 @@
+[
+  {
+    "name": "ns.down.transmission.success",
+    "time": "2025-07-17T01:53:06.982244488Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "race-basement",
+          "application_ids": {
+            "application_id": "freezers"
+          },
+          "dev_eui": "A84041412189D17E",
+          "join_eui": "A840410000000107",
+          "dev_addr": "27FD5DB7"
+        }
+      }
+    ],
+    "data": {
+      "@type": "type.googleapis.com/ttn.lorawan.v3.DownlinkMessage",
+      "payload": {
+        "m_hdr": {
+          "m_type": "UNCONFIRMED_DOWN"
+        },
+        "mic": "5UekXQ==",
+        "mac_payload": {
+          "f_hdr": {
+            "dev_addr": "27FD5DB7",
+            "f_ctrl": {
+              "adr": true,
+              "ack": true
+            },
+            "f_cnt": 5
+          },
+          "full_f_cnt": 5
+        }
+      },
+      "end_device_ids": {
+        "device_id": "race-basement",
+        "application_ids": {
+          "application_id": "freezers"
+        },
+        "dev_eui": "A84041412189D17E",
+        "join_eui": "A840410000000107",
+        "dev_addr": "27FD5DB7"
+      },
+      "request": {
+        "downlink_paths": [
+          {
+            "uplink_token": "CiUKIwoXZXVpLTgwMDI5Y2ZmZmVkYWViYTAtMDESCIACnP/+2uugEOPsnvkIGgsI/q7hwwYQksuZAiC45YGZ80U="
+          }
+        ],
+        "rx1_delay": 5,
+        "rx1_data_rate": {
+          "lora": {
+            "bandwidth": 500000,
+            "spreading_factor": 7,
+            "coding_rate": "4/5"
+          }
+        },
+        "rx1_frequency": "923900000",
+        "rx2_data_rate": {
+          "lora": {
+            "bandwidth": 500000,
+            "spreading_factor": 12,
+            "coding_rate": "4/5"
+          }
+        },
+        "rx2_frequency": "923300000",
+        "priority": "HIGHEST",
+        "frequency_plan_id": "US_902_928_FSB_1"
+      },
+      "correlation_ids": [
+        "gs:tx_ack:01K0B1BNX54PZ15YZXR9YC19QW",
+        "gs:uplink:01K0B1BH1MSZYF6C3415315CTD",
+        "ns:downlink:01K0B1BHE8DP31XXPD9PBVR9W2",
+        "ns:transmission:01K0B1BHE8HD3289PDRJCVQ16B"
+      ],
+      "session_key_id": "AZgC8VImVEyEWdY46FgaRA=="
+    },
+    "correlation_ids": [
+      "gs:tx_ack:01K0B1BNX54PZ15YZXR9YC19QW",
+      "gs:uplink:01K0B1BH1MSZYF6C3415315CTD",
+      "ns:downlink:01K0B1BHE8DP31XXPD9PBVR9W2",
+      "ns:transmission:01K0B1BHE8HD3289PDRJCVQ16B"
+    ],
+    "origin": "ip-10-22-4-13.us-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0B1BNX6DPXBPYQ25BTRJSFW"
+  },
+  {
+    "name": "ns.down.data.schedule.success",
+    "time": "2025-07-17T01:53:02.409653636Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "race-basement",
+          "application_ids": {
+            "application_id": "freezers"
+          },
+          "dev_eui": "A84041412189D17E",
+          "join_eui": "A840410000000107",
+          "dev_addr": "27FD5DB7"
+        }
+      }
+    ],
+    "data": {
+      "@type": "type.googleapis.com/ttn.lorawan.v3.ScheduleDownlinkResponse",
+      "delay": "4.595377672s",
+      "downlink_path": {
+        "fixed": {
+          "gateway_ids": {
+            "gateway_id": "eui-80029cfffedaeba0-01",
+            "eui": "80029CFFFEDAEBA0"
+          }
+        }
+      },
+      "rx1": true
+    },
+    "correlation_ids": [
+      "gs:uplink:01K0B1BH1MSZYF6C3415315CTD",
+      "ns:downlink:01K0B1BHE8DP31XXPD9PBVR9W2",
+      "ns:transmission:01K0B1BHE8HD3289PDRJCVQ16B"
+    ],
+    "origin": "ip-10-22-4-13.us-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0B1BHE9YDTEFGYK0CC3G1Y8"
+  },
+  {
+    "name": "ns.down.data.schedule.attempt",
+    "time": "2025-07-17T01:53:02.408715498Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "race-basement",
+          "application_ids": {
+            "application_id": "freezers"
+          },
+          "dev_eui": "A84041412189D17E",
+          "join_eui": "A840410000000107",
+          "dev_addr": "27FD5DB7"
+        }
+      }
+    ],
+    "data": {
+      "@type": "type.googleapis.com/ttn.lorawan.v3.DownlinkMessage",
+      "raw_payload": "YLdd/SegBQDlR6Rd",
+      "payload": {
+        "m_hdr": {
+          "m_type": "UNCONFIRMED_DOWN"
+        },
+        "mic": "5UekXQ==",
+        "mac_payload": {
+          "f_hdr": {
+            "dev_addr": "27FD5DB7",
+            "f_ctrl": {
+              "adr": true,
+              "ack": true
+            },
+            "f_cnt": 5
+          },
+          "full_f_cnt": 5
+        }
+      },
+      "request": {
+        "downlink_paths": [
+          {
+            "uplink_token": "CiUKIwoXZXVpLTgwMDI5Y2ZmZmVkYWViYTAtMDESCIACnP/+2uugEOPsnvkIGgsI/q7hwwYQksuZAiC45YGZ80U="
+          }
+        ],
+        "rx1_delay": 5,
+        "rx1_data_rate": {
+          "lora": {
+            "bandwidth": 500000,
+            "spreading_factor": 7,
+            "coding_rate": "4/5"
+          }
+        },
+        "rx1_frequency": "923900000",
+        "rx2_data_rate": {
+          "lora": {
+            "bandwidth": 500000,
+            "spreading_factor": 12,
+            "coding_rate": "4/5"
+          }
+        },
+        "rx2_frequency": "923300000",
+        "priority": "HIGHEST",
+        "frequency_plan_id": "US_902_928_FSB_1"
+      },
+      "correlation_ids": [
+        "gs:uplink:01K0B1BH1MSZYF6C3415315CTD",
+        "ns:downlink:01K0B1BHE8DP31XXPD9PBVR9W2",
+        "ns:transmission:01K0B1BHE8HD3289PDRJCVQ16B"
+      ]
+    },
+    "correlation_ids": [
+      "gs:uplink:01K0B1BH1MSZYF6C3415315CTD",
+      "ns:downlink:01K0B1BHE8DP31XXPD9PBVR9W2",
+      "ns:transmission:01K0B1BHE8HD3289PDRJCVQ16B"
+    ],
+    "origin": "ip-10-22-4-13.us-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0B1BHE8CN96XWQN6778EDSM"
+  },
+  {
+    "name": "ns.up.data.forward",
+    "time": "2025-07-17T01:53:02.210517532Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "race-basement",
+          "application_ids": {
+            "application_id": "freezers"
+          },
+          "dev_eui": "A84041412189D17E",
+          "join_eui": "A840410000000107",
+          "dev_addr": "27FD5DB7"
+        }
+      }
+    ],
+    "data": {
+      "@type": "type.googleapis.com/ttn.lorawan.v3.ApplicationUp",
+      "end_device_ids": {
+        "device_id": "race-basement",
+        "application_ids": {
+          "application_id": "freezers"
+        },
+        "dev_eui": "A84041412189D17E",
+        "join_eui": "A840410000000107",
+        "dev_addr": "27FD5DB7"
+      },
+      "correlation_ids": [
+        "gs:uplink:01K0B1BH1MSZYF6C3415315CTD"
+      ],
+      "uplink_message": {
+        "session_key_id": "AZgC8VImVEyEWdY46FgaRA==",
+        "f_port": 10,
+        "f_cnt": 5,
+        "frm_payload": "ED8Rm8hf+U5ZWA==",
+        "rx_metadata": [
+          {
+            "gateway_ids": {
+              "gateway_id": "eui-80029cfffedaeba0-01",
+              "eui": "80029CFFFEDAEBA0"
+            },
+            "time": "2025-07-17T01:53:01.947777986Z",
+            "timestamp": 2401744483,
+            "rssi": -70,
+            "channel_rssi": -70,
+            "snr": 9.25,
+            "location": {
+              "latitude": 38.9327756055498,
+              "longitude": -94.8234985881987,
+              "source": "SOURCE_REGISTRY"
+            },
+            "uplink_token": "CiUKIwoXZXVpLTgwMDI5Y2ZmZmVkYWViYTAtMDESCIACnP/+2uugEOPsnvkIGgsI/q7hwwYQksuZAiC45YGZ80U=",
+            "received_at": "2025-07-17T01:53:01.975751454Z"
+          }
+        ],
+        "settings": {
+          "data_rate": {
+            "lora": {
+              "bandwidth": 125000,
+              "spreading_factor": 7,
+              "coding_rate": "4/5"
+            }
+          },
+          "frequency": "902500000",
+          "timestamp": 2401744483,
+          "time": "2025-07-17T01:53:01.947777986Z"
+        },
+        "received_at": "2025-07-17T01:53:02.005225434Z",
+        "confirmed": true,
+        "consumed_airtime": "0.061696s",
+        "network_ids": {
+          "net_id": "000013",
+          "ns_id": "EC656E0000102DB4",
+          "tenant_id": "eric",
+          "cluster_id": "nam1",
+          "cluster_address": "nam1.cloud.thethings.industries",
+          "tenant_address": "eric.nam1.cloud.thethings.industries"
+        },
+        "last_battery_percentage": {
+          "f_cnt": 4,
+          "value": 39.130436,
+          "received_at": "2025-07-17T01:52:34.794104775Z"
+        }
+      }
+    },
+    "correlation_ids": [
+      "gs:uplink:01K0B1BH1MSZYF6C3415315CTD"
+    ],
+    "origin": "ip-10-22-4-13.us-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0B1BH82GWB3JYWCSQY9AT5F"
+  },
+  {
+    "name": "as.up.data.forward",
+    "time": "2025-07-17T01:53:02.210203590Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "race-basement",
+          "application_ids": {
+            "application_id": "freezers"
+          },
+          "dev_eui": "A84041412189D17E",
+          "join_eui": "A840410000000107",
+          "dev_addr": "27FD5DB7"
+        }
+      }
+    ],
+    "data": {
+      "@type": "type.googleapis.com/ttn.lorawan.v3.ApplicationUp",
+      "end_device_ids": {
+        "device_id": "race-basement",
+        "application_ids": {
+          "application_id": "freezers"
+        },
+        "dev_eui": "A84041412189D17E",
+        "join_eui": "A840410000000107",
+        "dev_addr": "27FD5DB7"
+      },
+      "correlation_ids": [
+        "gs:uplink:01K0B1BH1MSZYF6C3415315CTD"
+      ],
+      "received_at": "2025-07-17T01:53:02.207938666Z",
+      "uplink_message": {
+        "session_key_id": "AZgC8VImVEyEWdY46FgaRA==",
+        "f_port": 10,
+        "f_cnt": 5,
+        "frm_payload": "DGwCAAALAAAAAA==",
+        "decoded_payload": {
+          "BAT_V": 3.18,
+          "LAST_WATER_LEAK_DURATION": 0,
+          "MOD": 2,
+          "WATER_LEAK_STATUS": 0,
+          "WATER_LEAK_TIMES": 11
+        },
+        "rx_metadata": [
+          {
+            "gateway_ids": {
+              "gateway_id": "eui-80029cfffedaeba0-01",
+              "eui": "80029CFFFEDAEBA0"
+            },
+            "time": "2025-07-17T01:53:01.947777986Z",
+            "timestamp": 2401744483,
+            "rssi": -70,
+            "channel_rssi": -70,
+            "snr": 9.25,
+            "location": {
+              "latitude": 38.9327756055498,
+              "longitude": -94.8234985881987,
+              "source": "SOURCE_REGISTRY"
+            },
+            "uplink_token": "CiUKIwoXZXVpLTgwMDI5Y2ZmZmVkYWViYTAtMDESCIACnP/+2uugEOPsnvkIGgsI/q7hwwYQksuZAiC45YGZ80U=",
+            "received_at": "2025-07-17T01:53:01.975751454Z"
+          }
+        ],
+        "settings": {
+          "data_rate": {
+            "lora": {
+              "bandwidth": 125000,
+              "spreading_factor": 7,
+              "coding_rate": "4/5"
+            }
+          },
+          "frequency": "902500000",
+          "timestamp": 2401744483,
+          "time": "2025-07-17T01:53:01.947777986Z"
+        },
+        "received_at": "2025-07-17T01:53:02.005225434Z",
+        "confirmed": true,
+        "consumed_airtime": "0.061696s",
+        "version_ids": {
+          "brand_id": "dragino",
+          "model_id": "lwl02",
+          "hardware_version": "_unknown_hw_version_",
+          "firmware_version": "1.6",
+          "band_id": "US_902_928"
+        },
+        "network_ids": {
+          "net_id": "000013",
+          "ns_id": "EC656E0000102DB4",
+          "tenant_id": "eric",
+          "cluster_id": "nam1",
+          "cluster_address": "nam1.cloud.thethings.industries",
+          "tenant_address": "eric.nam1.cloud.thethings.industries"
+        },
+        "last_battery_percentage": {
+          "f_cnt": 4,
+          "value": 39.130436,
+          "received_at": "2025-07-17T01:52:34.794104775Z"
+        }
+      }
+    },
+    "correlation_ids": [
+      "gs:uplink:01K0B1BH1MSZYF6C3415315CTD"
+    ],
+    "origin": "ip-10-22-4-12.us-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0B1BH82AN7G89AZNWKM9FCF"
+  },
+  {
+    "name": "as.up.data.receive",
+    "time": "2025-07-17T01:53:02.208707098Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "race-basement",
+          "application_ids": {
+            "application_id": "freezers"
+          },
+          "dev_eui": "A84041412189D17E",
+          "join_eui": "A840410000000107",
+          "dev_addr": "27FD5DB7"
+        }
+      }
+    ],
+    "correlation_ids": [
+      "gs:uplink:01K0B1BH1MSZYF6C3415315CTD"
+    ],
+    "origin": "ip-10-22-4-12.us-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0B1BH80R318KGQTT02J20A6"
+  },
+  {
+    "name": "ns.up.data.process",
+    "time": "2025-07-17T01:53:02.207311659Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "race-basement",
+          "application_ids": {
+            "application_id": "freezers"
+          },
+          "dev_eui": "A84041412189D17E",
+          "join_eui": "A840410000000107",
+          "dev_addr": "27FD5DB7"
+        }
+      }
+    ],
+    "data": {
+      "@type": "type.googleapis.com/ttn.lorawan.v3.UplinkMessage",
+      "raw_payload": "gLdd/SeABQAKED8Rm8hf+U5ZWFblnNs=",
+      "payload": {
+        "m_hdr": {
+          "m_type": "CONFIRMED_UP"
+        },
+        "mic": "VuWc2w==",
+        "mac_payload": {
+          "f_hdr": {
+            "dev_addr": "27FD5DB7",
+            "f_ctrl": {
+              "adr": true
+            },
+            "f_cnt": 5
+          },
+          "f_port": 10,
+          "frm_payload": "ED8Rm8hf+U5ZWA==",
+          "full_f_cnt": 5
+        }
+      },
+      "settings": {
+        "data_rate": {
+          "lora": {
+            "bandwidth": 125000,
+            "spreading_factor": 7,
+            "coding_rate": "4/5"
+          }
+        },
+        "frequency": "902500000",
+        "timestamp": 2401744483,
+        "time": "2025-07-17T01:53:01.947777986Z"
+      },
+      "rx_metadata": [
+        {
+          "gateway_ids": {
+            "gateway_id": "eui-80029cfffedaeba0-01",
+            "eui": "80029CFFFEDAEBA0"
+          },
+          "time": "2025-07-17T01:53:01.947777986Z",
+          "timestamp": 2401744483,
+          "rssi": -70,
+          "channel_rssi": -70,
+          "snr": 9.25,
+          "location": {
+            "latitude": 38.9327756055498,
+            "longitude": -94.8234985881987,
+            "source": "SOURCE_REGISTRY"
+          },
+          "uplink_token": "CiUKIwoXZXVpLTgwMDI5Y2ZmZmVkYWViYTAtMDESCIACnP/+2uugEOPsnvkIGgsI/q7hwwYQksuZAiC45YGZ80U=",
+          "received_at": "2025-07-17T01:53:01.975751454Z"
+        }
+      ],
+      "received_at": "2025-07-17T01:53:02.005225434Z",
+      "correlation_ids": [
+        "gs:uplink:01K0B1BH1MSZYF6C3415315CTD"
+      ],
+      "device_channel_index": 1,
+      "consumed_airtime": "0.061696s"
+    },
+    "correlation_ids": [
+      "gs:uplink:01K0B1BH1MSZYF6C3415315CTD"
+    ],
+    "origin": "ip-10-22-4-13.us-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0B1BH7Z8FTXFRETMJR1NS6A"
+  },
+  {
+    "name": "ns.up.data.receive",
+    "time": "2025-07-17T01:53:02.007914849Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "race-basement",
+          "application_ids": {
+            "application_id": "freezers"
+          },
+          "dev_eui": "A84041412189D17E",
+          "join_eui": "A840410000000107",
+          "dev_addr": "27FD5DB7"
+        }
+      }
+    ],
+    "data": {
+      "@type": "type.googleapis.com/ttn.lorawan.v3.UplinkMessage",
+      "raw_payload": "gLdd/SeABQAKED8Rm8hf+U5ZWFblnNs=",
+      "payload": {
+        "m_hdr": {
+          "m_type": "CONFIRMED_UP"
+        },
+        "mic": "VuWc2w==",
+        "mac_payload": {
+          "f_hdr": {
+            "dev_addr": "27FD5DB7",
+            "f_ctrl": {
+              "adr": true
+            },
+            "f_cnt": 5
+          },
+          "f_port": 10,
+          "frm_payload": "ED8Rm8hf+U5ZWA==",
+          "full_f_cnt": 5
+        }
+      },
+      "settings": {
+        "data_rate": {
+          "lora": {
+            "bandwidth": 125000,
+            "spreading_factor": 7,
+            "coding_rate": "4/5"
+          }
+        },
+        "frequency": "902500000",
+        "timestamp": 2401744483,
+        "time": "2025-07-17T01:53:01.947777986Z"
+      },
+      "rx_metadata": [
+        {
+          "gateway_ids": {
+            "gateway_id": "eui-80029cfffedaeba0-01",
+            "eui": "80029CFFFEDAEBA0"
+          },
+          "time": "2025-07-17T01:53:01.947777986Z",
+          "timestamp": 2401744483,
+          "rssi": -70,
+          "channel_rssi": -70,
+          "snr": 9.25,
+          "location": {
+            "latitude": 38.9327756055498,
+            "longitude": -94.8234985881987,
+            "source": "SOURCE_REGISTRY"
+          },
+          "uplink_token": "CiUKIwoXZXVpLTgwMDI5Y2ZmZmVkYWViYTAtMDESCIACnP/+2uugEOPsnvkIGgsI/q7hwwYQksuZAiC45YGZ80U=",
+          "received_at": "2025-07-17T01:53:01.975751454Z"
+        }
+      ],
+      "received_at": "2025-07-17T01:53:02.005225434Z",
+      "correlation_ids": [
+        "gs:uplink:01K0B1BH1MSZYF6C3415315CTD"
+      ],
+      "device_channel_index": 1,
+      "consumed_airtime": "0.061696s"
+    },
+    "correlation_ids": [
+      "gs:uplink:01K0B1BH1MSZYF6C3415315CTD"
+    ],
+    "origin": "ip-10-22-4-13.us-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0B1BH1QAA8WDGA08X1XV4Y1"
+  },
+  {
+    "name": "ns.down.transmission.success",
+    "time": "2025-07-17T01:52:39.765305029Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "race-basement",
+          "application_ids": {
+            "application_id": "freezers"
+          },
+          "dev_eui": "A84041412189D17E",
+          "join_eui": "A840410000000107",
+          "dev_addr": "27FD5DB7"
+        }
+      }
+    ],
+    "data": {
+      "@type": "type.googleapis.com/ttn.lorawan.v3.DownlinkMessage",
+      "payload": {
+        "m_hdr": {
+          "m_type": "UNCONFIRMED_DOWN"
+        },
+        "mic": "EKWQjg==",
+        "mac_payload": {
+          "f_hdr": {
+            "dev_addr": "27FD5DB7",
+            "f_ctrl": {
+              "adr": true,
+              "ack": true
+            },
+            "f_cnt": 4
+          },
+          "full_f_cnt": 4
+        }
+      },
+      "end_device_ids": {
+        "device_id": "race-basement",
+        "application_ids": {
+          "application_id": "freezers"
+        },
+        "dev_eui": "A84041412189D17E",
+        "join_eui": "A840410000000107",
+        "dev_addr": "27FD5DB7"
+      },
+      "request": {
+        "downlink_paths": [
+          {
+            "uplink_token": "CiUKIwoXZXVpLTgwMDI5Y2ZmZmVkYWViYTAtMDESCIACnP/+2uugEMTaoewIGgwI4q7hwwYQ/8Ky+gIgoKOr541F"
+          }
+        ],
+        "rx1_delay": 5,
+        "rx1_data_rate": {
+          "lora": {
+            "bandwidth": 500000,
+            "spreading_factor": 7,
+            "coding_rate": "4/5"
+          }
+        },
+        "rx1_frequency": "927500000",
+        "rx2_data_rate": {
+          "lora": {
+            "bandwidth": 500000,
+            "spreading_factor": 12,
+            "coding_rate": "4/5"
+          }
+        },
+        "rx2_frequency": "923300000",
+        "priority": "HIGHEST",
+        "frequency_plan_id": "US_902_928_FSB_1"
+      },
+      "correlation_ids": [
+        "gs:tx_ack:01K0B1AVAMPW7CV5JX7CYH9CW9",
+        "gs:uplink:01K0B1APF9TMAC8BEWT7GKQQN0",
+        "ns:downlink:01K0B1APVY97N9HTJJWC1H6JE6",
+        "ns:transmission:01K0B1APVY20G5E2X6TMY0M0P5"
+      ],
+      "session_key_id": "AZgC8VImVEyEWdY46FgaRA=="
+    },
+    "correlation_ids": [
+      "gs:tx_ack:01K0B1AVAMPW7CV5JX7CYH9CW9",
+      "gs:uplink:01K0B1APF9TMAC8BEWT7GKQQN0",
+      "ns:downlink:01K0B1APVY97N9HTJJWC1H6JE6",
+      "ns:transmission:01K0B1APVY20G5E2X6TMY0M0P5"
+    ],
+    "origin": "ip-10-22-4-13.us-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0B1AVAN0VF95BNYF7RQCZNS"
+  },
+  {
+    "name": "ns.down.data.schedule.success",
+    "time": "2025-07-17T01:52:35.199662175Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "race-basement",
+          "application_ids": {
+            "application_id": "freezers"
+          },
+          "dev_eui": "A84041412189D17E",
+          "join_eui": "A840410000000107",
+          "dev_addr": "27FD5DB7"
+        }
+      }
+    ],
+    "data": {
+      "@type": "type.googleapis.com/ttn.lorawan.v3.ScheduleDownlinkResponse",
+      "delay": "4.594573067s",
+      "downlink_path": {
+        "fixed": {
+          "gateway_ids": {
+            "gateway_id": "eui-80029cfffedaeba0-01",
+            "eui": "80029CFFFEDAEBA0"
+          }
+        }
+      },
+      "rx1": true
+    },
+    "correlation_ids": [
+      "gs:uplink:01K0B1APF9TMAC8BEWT7GKQQN0",
+      "ns:downlink:01K0B1APVY97N9HTJJWC1H6JE6",
+      "ns:transmission:01K0B1APVY20G5E2X6TMY0M0P5"
+    ],
+    "origin": "ip-10-22-4-13.us-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0B1APVZD2P5AMQCPN0G1NV8"
+  },
+  {
+    "name": "ns.down.data.schedule.attempt",
+    "time": "2025-07-17T01:52:35.198544409Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "race-basement",
+          "application_ids": {
+            "application_id": "freezers"
+          },
+          "dev_eui": "A84041412189D17E",
+          "join_eui": "A840410000000107",
+          "dev_addr": "27FD5DB7"
+        }
+      }
+    ],
+    "data": {
+      "@type": "type.googleapis.com/ttn.lorawan.v3.DownlinkMessage",
+      "raw_payload": "YLdd/SegBAAQpZCO",
+      "payload": {
+        "m_hdr": {
+          "m_type": "UNCONFIRMED_DOWN"
+        },
+        "mic": "EKWQjg==",
+        "mac_payload": {
+          "f_hdr": {
+            "dev_addr": "27FD5DB7",
+            "f_ctrl": {
+              "adr": true,
+              "ack": true
+            },
+            "f_cnt": 4
+          },
+          "full_f_cnt": 4
+        }
+      },
+      "request": {
+        "downlink_paths": [
+          {
+            "uplink_token": "CiUKIwoXZXVpLTgwMDI5Y2ZmZmVkYWViYTAtMDESCIACnP/+2uugEMTaoewIGgwI4q7hwwYQ/8Ky+gIgoKOr541F"
+          }
+        ],
+        "rx1_delay": 5,
+        "rx1_data_rate": {
+          "lora": {
+            "bandwidth": 500000,
+            "spreading_factor": 7,
+            "coding_rate": "4/5"
+          }
+        },
+        "rx1_frequency": "927500000",
+        "rx2_data_rate": {
+          "lora": {
+            "bandwidth": 500000,
+            "spreading_factor": 12,
+            "coding_rate": "4/5"
+          }
+        },
+        "rx2_frequency": "923300000",
+        "priority": "HIGHEST",
+        "frequency_plan_id": "US_902_928_FSB_1"
+      },
+      "correlation_ids": [
+        "gs:uplink:01K0B1APF9TMAC8BEWT7GKQQN0",
+        "ns:downlink:01K0B1APVY97N9HTJJWC1H6JE6",
+        "ns:transmission:01K0B1APVY20G5E2X6TMY0M0P5"
+      ]
+    },
+    "correlation_ids": [
+      "gs:uplink:01K0B1APF9TMAC8BEWT7GKQQN0",
+      "ns:downlink:01K0B1APVY97N9HTJJWC1H6JE6",
+      "ns:transmission:01K0B1APVY20G5E2X6TMY0M0P5"
+    ],
+    "origin": "ip-10-22-4-13.us-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0B1APVY5F26TBHEX1KACCQE"
+  },
+  {
+    "name": "ns.up.data.forward",
+    "time": "2025-07-17T01:52:35.005110680Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "race-basement",
+          "application_ids": {
+            "application_id": "freezers"
+          },
+          "dev_eui": "A84041412189D17E",
+          "join_eui": "A840410000000107",
+          "dev_addr": "27FD5DB7"
+        }
+      }
+    ],
+    "data": {
+      "@type": "type.googleapis.com/ttn.lorawan.v3.ApplicationUp",
+      "end_device_ids": {
+        "device_id": "race-basement",
+        "application_ids": {
+          "application_id": "freezers"
+        },
+        "dev_eui": "A84041412189D17E",
+        "join_eui": "A840410000000107",
+        "dev_addr": "27FD5DB7"
+      },
+      "correlation_ids": [
+        "gs:uplink:01K0B1APF9TMAC8BEWT7GKQQN0"
+      ],
+      "uplink_message": {
+        "session_key_id": "AZgC8VImVEyEWdY46FgaRA==",
+        "f_port": 10,
+        "f_cnt": 4,
+        "frm_payload": "mE4GorjVyM2llw==",
+        "rx_metadata": [
+          {
+            "gateway_ids": {
+              "gateway_id": "eui-80029cfffedaeba0-01",
+              "eui": "80029CFFFEDAEBA0"
+            },
+            "time": "2025-07-17T01:52:34.736011028Z",
+            "timestamp": 2374528324,
+            "rssi": -61,
+            "channel_rssi": -61,
+            "snr": 9.25,
+            "location": {
+              "latitude": 38.9327756055498,
+              "longitude": -94.8234985881987,
+              "source": "SOURCE_REGISTRY"
+            },
+            "uplink_token": "CiUKIwoXZXVpLTgwMDI5Y2ZmZmVkYWViYTAtMDESCIACnP/+2uugEMTaoewIGgwI4q7hwwYQ/8Ky+gIgoKOr541F",
+            "received_at": "2025-07-17T01:52:34.763478346Z"
+          }
+        ],
+        "settings": {
+          "data_rate": {
+            "lora": {
+              "bandwidth": 125000,
+              "spreading_factor": 7,
+              "coding_rate": "4/5"
+            }
+          },
+          "frequency": "903700000",
+          "timestamp": 2374528324,
+          "time": "2025-07-17T01:52:34.736011028Z"
+        },
+        "received_at": "2025-07-17T01:52:34.794104775Z",
+        "confirmed": true,
+        "consumed_airtime": "0.061696s",
+        "network_ids": {
+          "net_id": "000013",
+          "ns_id": "EC656E0000102DB4",
+          "tenant_id": "eric",
+          "cluster_id": "nam1",
+          "cluster_address": "nam1.cloud.thethings.industries",
+          "tenant_address": "eric.nam1.cloud.thethings.industries"
+        },
+        "last_battery_percentage": {
+          "f_cnt": 4,
+          "value": 39.130436,
+          "received_at": "2025-07-17T01:52:34.794104775Z"
+        }
+      }
+    },
+    "correlation_ids": [
+      "gs:uplink:01K0B1APF9TMAC8BEWT7GKQQN0"
+    ],
+    "origin": "ip-10-22-4-13.us-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0B1APNX10QVHWW6NC2GA1VG"
+  },
+  {
+    "name": "as.up.data.forward",
+    "time": "2025-07-17T01:52:35.004637740Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "race-basement",
+          "application_ids": {
+            "application_id": "freezers"
+          },
+          "dev_eui": "A84041412189D17E",
+          "join_eui": "A840410000000107",
+          "dev_addr": "27FD5DB7"
+        }
+      }
+    ],
+    "data": {
+      "@type": "type.googleapis.com/ttn.lorawan.v3.ApplicationUp",
+      "end_device_ids": {
+        "device_id": "race-basement",
+        "application_ids": {
+          "application_id": "freezers"
+        },
+        "dev_eui": "A84041412189D17E",
+        "join_eui": "A840410000000107",
+        "dev_addr": "27FD5DB7"
+      },
+      "correlation_ids": [
+        "gs:uplink:01K0B1APF9TMAC8BEWT7GKQQN0"
+      ],
+      "received_at": "2025-07-17T01:52:34.997320347Z",
+      "uplink_message": {
+        "session_key_id": "AZgC8VImVEyEWdY46FgaRA==",
+        "f_port": 10,
+        "f_cnt": 4,
+        "frm_payload": "TGwCAAALAAAiAA==",
+        "decoded_payload": {
+          "BAT_V": 3.18,
+          "LAST_WATER_LEAK_DURATION": 34,
+          "MOD": 2,
+          "WATER_LEAK_STATUS": 1,
+          "WATER_LEAK_TIMES": 11
+        },
+        "rx_metadata": [
+          {
+            "gateway_ids": {
+              "gateway_id": "eui-80029cfffedaeba0-01",
+              "eui": "80029CFFFEDAEBA0"
+            },
+            "time": "2025-07-17T01:52:34.736011028Z",
+            "timestamp": 2374528324,
+            "rssi": -61,
+            "channel_rssi": -61,
+            "snr": 9.25,
+            "location": {
+              "latitude": 38.9327756055498,
+              "longitude": -94.8234985881987,
+              "source": "SOURCE_REGISTRY"
+            },
+            "uplink_token": "CiUKIwoXZXVpLTgwMDI5Y2ZmZmVkYWViYTAtMDESCIACnP/+2uugEMTaoewIGgwI4q7hwwYQ/8Ky+gIgoKOr541F",
+            "received_at": "2025-07-17T01:52:34.763478346Z"
+          }
+        ],
+        "settings": {
+          "data_rate": {
+            "lora": {
+              "bandwidth": 125000,
+              "spreading_factor": 7,
+              "coding_rate": "4/5"
+            }
+          },
+          "frequency": "903700000",
+          "timestamp": 2374528324,
+          "time": "2025-07-17T01:52:34.736011028Z"
+        },
+        "received_at": "2025-07-17T01:52:34.794104775Z",
+        "confirmed": true,
+        "consumed_airtime": "0.061696s",
+        "version_ids": {
+          "brand_id": "dragino",
+          "model_id": "lwl02",
+          "hardware_version": "_unknown_hw_version_",
+          "firmware_version": "1.6",
+          "band_id": "US_902_928"
+        },
+        "network_ids": {
+          "net_id": "000013",
+          "ns_id": "EC656E0000102DB4",
+          "tenant_id": "eric",
+          "cluster_id": "nam1",
+          "cluster_address": "nam1.cloud.thethings.industries",
+          "tenant_address": "eric.nam1.cloud.thethings.industries"
+        },
+        "last_battery_percentage": {
+          "f_cnt": 4,
+          "value": 39.130436,
+          "received_at": "2025-07-17T01:52:34.794104775Z"
+        }
+      }
+    },
+    "correlation_ids": [
+      "gs:uplink:01K0B1APF9TMAC8BEWT7GKQQN0"
+    ],
+    "origin": "ip-10-22-13-242.us-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0B1APNWCQWFJCW8K3KW5VV5"
+  },
+  {
+    "name": "as.up.data.receive",
+    "time": "2025-07-17T01:52:34.997591254Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "race-basement",
+          "application_ids": {
+            "application_id": "freezers"
+          },
+          "dev_eui": "A84041412189D17E",
+          "join_eui": "A840410000000107",
+          "dev_addr": "27FD5DB7"
+        }
+      }
+    ],
+    "correlation_ids": [
+      "gs:uplink:01K0B1APF9TMAC8BEWT7GKQQN0"
+    ],
+    "origin": "ip-10-22-13-242.us-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0B1APNNYQ93X67K1P4H3Z1G"
+  },
+  {
+    "name": "ns.up.data.process",
+    "time": "2025-07-17T01:52:34.996430050Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "race-basement",
+          "application_ids": {
+            "application_id": "freezers"
+          },
+          "dev_eui": "A84041412189D17E",
+          "join_eui": "A840410000000107",
+          "dev_addr": "27FD5DB7"
+        }
+      }
+    ],
+    "data": {
+      "@type": "type.googleapis.com/ttn.lorawan.v3.UplinkMessage",
+      "raw_payload": "gLdd/SeDBAAGZA0KmE4GorjVyM2ll96b/oc=",
+      "payload": {
+        "m_hdr": {
+          "m_type": "CONFIRMED_UP"
+        },
+        "mic": "3pv+hw==",
+        "mac_payload": {
+          "f_hdr": {
+            "dev_addr": "27FD5DB7",
+            "f_ctrl": {
+              "adr": true
+            },
+            "f_cnt": 4,
+            "f_opts": "BmQN"
+          },
+          "f_port": 10,
+          "frm_payload": "mE4GorjVyM2llw==",
+          "full_f_cnt": 4
+        }
+      },
+      "settings": {
+        "data_rate": {
+          "lora": {
+            "bandwidth": 125000,
+            "spreading_factor": 7,
+            "coding_rate": "4/5"
+          }
+        },
+        "frequency": "903700000",
+        "timestamp": 2374528324,
+        "time": "2025-07-17T01:52:34.736011028Z"
+      },
+      "rx_metadata": [
+        {
+          "gateway_ids": {
+            "gateway_id": "eui-80029cfffedaeba0-01",
+            "eui": "80029CFFFEDAEBA0"
+          },
+          "time": "2025-07-17T01:52:34.736011028Z",
+          "timestamp": 2374528324,
+          "rssi": -61,
+          "channel_rssi": -61,
+          "snr": 9.25,
+          "location": {
+            "latitude": 38.9327756055498,
+            "longitude": -94.8234985881987,
+            "source": "SOURCE_REGISTRY"
+          },
+          "uplink_token": "CiUKIwoXZXVpLTgwMDI5Y2ZmZmVkYWViYTAtMDESCIACnP/+2uugEMTaoewIGgwI4q7hwwYQ/8Ky+gIgoKOr541F",
+          "received_at": "2025-07-17T01:52:34.763478346Z"
+        }
+      ],
+      "received_at": "2025-07-17T01:52:34.794104775Z",
+      "correlation_ids": [
+        "gs:uplink:01K0B1APF9TMAC8BEWT7GKQQN0"
+      ],
+      "device_channel_index": 7,
+      "consumed_airtime": "0.061696s"
+    },
+    "correlation_ids": [
+      "gs:uplink:01K0B1APF9TMAC8BEWT7GKQQN0"
+    ],
+    "origin": "ip-10-22-4-13.us-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0B1APNMPD32Y3M45NQ3BXA7"
+  },
+  {
+    "name": "ns.mac.dev_status.answer",
+    "time": "2025-07-17T01:52:34.995085577Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "race-basement",
+          "application_ids": {
+            "application_id": "freezers"
+          },
+          "dev_eui": "A84041412189D17E",
+          "join_eui": "A840410000000107",
+          "dev_addr": "27FD5DB7"
+        }
+      }
+    ],
+    "data": {
+      "@type": "type.googleapis.com/ttn.lorawan.v3.MACCommand.DevStatusAns",
+      "battery": 100,
+      "margin": 13
+    },
+    "correlation_ids": [
+      "gs:uplink:01K0B1APF9TMAC8BEWT7GKQQN0"
+    ],
+    "origin": "ip-10-22-4-13.us-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0B1APNK4JH0X6WDQHHG5VFH"
+  },
+  {
+    "name": "ns.up.data.receive",
+    "time": "2025-07-17T01:52:34.796496788Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "race-basement",
+          "application_ids": {
+            "application_id": "freezers"
+          },
+          "dev_eui": "A84041412189D17E",
+          "join_eui": "A840410000000107",
+          "dev_addr": "27FD5DB7"
+        }
+      }
+    ],
+    "data": {
+      "@type": "type.googleapis.com/ttn.lorawan.v3.UplinkMessage",
+      "raw_payload": "gLdd/SeDBAAGZA0KmE4GorjVyM2ll96b/oc=",
+      "payload": {
+        "m_hdr": {
+          "m_type": "CONFIRMED_UP"
+        },
+        "mic": "3pv+hw==",
+        "mac_payload": {
+          "f_hdr": {
+            "dev_addr": "27FD5DB7",
+            "f_ctrl": {
+              "adr": true
+            },
+            "f_cnt": 4,
+            "f_opts": "BmQN"
+          },
+          "f_port": 10,
+          "frm_payload": "mE4GorjVyM2llw==",
+          "full_f_cnt": 4
+        }
+      },
+      "settings": {
+        "data_rate": {
+          "lora": {
+            "bandwidth": 125000,
+            "spreading_factor": 7,
+            "coding_rate": "4/5"
+          }
+        },
+        "frequency": "903700000",
+        "timestamp": 2374528324,
+        "time": "2025-07-17T01:52:34.736011028Z"
+      },
+      "rx_metadata": [
+        {
+          "gateway_ids": {
+            "gateway_id": "eui-80029cfffedaeba0-01",
+            "eui": "80029CFFFEDAEBA0"
+          },
+          "time": "2025-07-17T01:52:34.736011028Z",
+          "timestamp": 2374528324,
+          "rssi": -61,
+          "channel_rssi": -61,
+          "snr": 9.25,
+          "location": {
+            "latitude": 38.9327756055498,
+            "longitude": -94.8234985881987,
+            "source": "SOURCE_REGISTRY"
+          },
+          "uplink_token": "CiUKIwoXZXVpLTgwMDI5Y2ZmZmVkYWViYTAtMDESCIACnP/+2uugEMTaoewIGgwI4q7hwwYQ/8Ky+gIgoKOr541F",
+          "received_at": "2025-07-17T01:52:34.763478346Z"
+        }
+      ],
+      "received_at": "2025-07-17T01:52:34.794104775Z",
+      "correlation_ids": [
+        "gs:uplink:01K0B1APF9TMAC8BEWT7GKQQN0"
+      ],
+      "device_channel_index": 7,
+      "consumed_airtime": "0.061696s"
+    },
+    "correlation_ids": [
+      "gs:uplink:01K0B1APF9TMAC8BEWT7GKQQN0"
+    ],
+    "origin": "ip-10-22-4-13.us-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0B1APFCNYXBMKX23GKWK2TX"
+  },
+  {
+    "time": "2025-07-17T01:51:59.215Z",
+    "name": "synthetic.status.filter_disabled",
+    "isError": false,
+    "isSynthetic": true,
+    "unique_id": "synthetic.1752717119215"
+  },
+  {
+    "name": "ns.down.transmission.success",
+    "time": "2025-07-16T08:40:48.512293879Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "race-basement",
+          "application_ids": {
+            "application_id": "freezers"
+          }
+        }
+      }
+    ],
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0969F404C67D0539W87K7SG"
+  },
+  {
+    "name": "ns.mac.dev_status.request",
+    "time": "2025-07-16T08:40:44.099220339Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "race-basement",
+          "application_ids": {
+            "application_id": "freezers"
+          }
+        }
+      }
+    ],
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0969AT3QKQD59HRM0WGPYSR"
+  },
+  {
+    "name": "ns.down.data.schedule.success",
+    "time": "2025-07-16T08:40:44.099213679Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "race-basement",
+          "application_ids": {
+            "application_id": "freezers"
+          }
+        }
+      }
+    ],
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0969AT3GAT04XEWV5Q3WAKN"
+  },
+  {
+    "name": "ns.down.data.schedule.attempt",
+    "time": "2025-07-16T08:40:43.962284879Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "race-basement",
+          "application_ids": {
+            "application_id": "freezers"
+          }
+        }
+      }
+    ],
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0969ANTWFG3WN0Q8N9S8AJV"
+  },
+  {
+    "name": "as.up.data.forward",
+    "time": "2025-07-16T08:40:43.894875486Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "race-basement",
+          "application_ids": {
+            "application_id": "freezers"
+          }
+        }
+      }
+    ],
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0969AKP97JD18FG84X2RWNS"
+  },
+  {
+    "name": "as.up.data.forward",
+    "time": "2025-07-15T08:40:39.864482717Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "race-basement",
+          "application_ids": {
+            "application_id": "freezers"
+          }
+        }
+      }
+    ],
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K06KWFNRJ3A2EAT78E75GQ1S"
+  }
+]

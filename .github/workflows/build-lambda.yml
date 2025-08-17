@@ -1,0 +1,52 @@
+name: Build Lambda ZIP
+
+on:
+  push:
+    branches: [ main ]
+    tags: [ "v*" ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.24.x'
+          cache: true
+
+      - name: Go version
+        run: go version
+
+      - name: Download modules
+        run: go mod download
+
+      - name: Build linux/amd64 bootstrap binary
+        env:
+          GOOS: linux
+          GOARCH: amd64
+          CGO_ENABLED: '0'
+        run: |
+          mkdir -p dist
+          go build -trimpath -ldflags "-s -w" -o dist/bootstrap ./main.go
+
+      - name: Package zip
+        run: |
+          cd dist
+          zip -9 lambda.zip bootstrap
+
+      - name: Upload artifact (lambda.zip)
+        uses: actions/upload-artifact@v4
+        with:
+          name: lambda-amd64-zip
+          path: dist/lambda.zip
+          if-no-files-found: error

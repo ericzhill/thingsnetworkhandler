@@ -1,0 +1,610 @@
+[
+  {
+    "name": "ns.up.data.forward",
+    "time": "2025-07-18T15:25:49.754769472Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "eui-a840416c81850cd1",
+          "application_ids": {
+            "application_id": "freezers"
+          },
+          "dev_eui": "A840416C81850CD1",
+          "join_eui": "A840410000000100",
+          "dev_addr": "27FD5DB1"
+        }
+      }
+    ],
+    "data": {
+      "@type": "type.googleapis.com/ttn.lorawan.v3.ApplicationUp",
+      "end_device_ids": {
+        "device_id": "eui-a840416c81850cd1",
+        "application_ids": {
+          "application_id": "freezers"
+        },
+        "dev_eui": "A840416C81850CD1",
+        "join_eui": "A840410000000100",
+        "dev_addr": "27FD5DB1"
+      },
+      "correlation_ids": [
+        "gs:uplink:01K0F28GK2P904TBYR2FFKPJ3C"
+      ],
+      "uplink_message": {
+        "session_key_id": "AY9ACmi3cvC3RPRtulVjFw==",
+        "f_port": 2,
+        "f_cnt": 32617,
+        "frm_payload": "+UaH1Tn9ItFfIXM=",
+        "rx_metadata": [
+          {
+            "gateway_ids": {
+              "gateway_id": "eui-80029cfffedaeba0-01",
+              "eui": "80029CFFFEDAEBA0"
+            },
+            "time": "2025-07-18T15:25:49.477519989Z",
+            "timestamp": 619910131,
+            "rssi": -57,
+            "channel_rssi": -57,
+            "snr": 10.75,
+            "location": {
+              "latitude": 38.9327756055498,
+              "longitude": -94.8234985881987,
+              "source": "SOURCE_REGISTRY"
+            },
+            "uplink_token": "CiUKIwoXZXVpLTgwMDI5Y2ZmZmVkYWViYTAtMDESCIACnP/+2uugEPOnzKcCGgwI/c7pwwYQl+vKgAIguNqXrIWPAQ==",
+            "received_at": "2025-07-18T15:25:49.511161084Z"
+          }
+        ],
+        "settings": {
+          "data_rate": {
+            "lora": {
+              "bandwidth": 125000,
+              "spreading_factor": 7,
+              "coding_rate": "4/5"
+            }
+          },
+          "frequency": "903100000",
+          "timestamp": 619910131,
+          "time": "2025-07-18T15:25:49.477519989Z"
+        },
+        "received_at": "2025-07-18T15:25:49.539548920Z",
+        "consumed_airtime": "0.061696s",
+        "network_ids": {
+          "net_id": "000013",
+          "ns_id": "EC656E0000102DB4",
+          "tenant_id": "eric",
+          "cluster_id": "nam1",
+          "cluster_address": "nam1.cloud.thethings.industries",
+          "tenant_address": "eric.nam1.cloud.thethings.industries"
+        },
+        "last_battery_percentage": {
+          "f_cnt": 32562,
+          "value": 39.130436,
+          "received_at": "2025-07-17T21:25:42.668201047Z"
+        }
+      }
+    },
+    "correlation_ids": [
+      "gs:uplink:01K0F28GK2P904TBYR2FFKPJ3C"
+    ],
+    "origin": "ip-10-22-4-13.us-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0F28GSTEF9HJATE9FYHY7K5"
+  },
+  {
+    "name": "as.up.data.forward",
+    "time": "2025-07-18T15:25:49.754137123Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "eui-a840416c81850cd1",
+          "application_ids": {
+            "application_id": "freezers"
+          },
+          "dev_eui": "A840416C81850CD1",
+          "join_eui": "A840410000000100",
+          "dev_addr": "27FD5DB1"
+        }
+      }
+    ],
+    "data": {
+      "@type": "type.googleapis.com/ttn.lorawan.v3.ApplicationUp",
+      "end_device_ids": {
+        "device_id": "eui-a840416c81850cd1",
+        "application_ids": {
+          "application_id": "freezers"
+        },
+        "dev_eui": "A840416C81850CD1",
+        "join_eui": "A840410000000100",
+        "dev_addr": "27FD5DB1"
+      },
+      "correlation_ids": [
+        "gs:uplink:01K0F28GK2P904TBYR2FFKPJ3C"
+      ],
+      "received_at": "2025-07-18T15:25:49.745886760Z",
+      "uplink_message": {
+        "session_key_id": "AY9ACmi3cvC3RPRtulVjFw==",
+        "f_port": 2,
+        "f_cnt": 32617,
+        "frm_payload": "+E8Cp3//AWh6Z3Y=",
+        "decoded_payload": {
+          "bytes": {
+            "Ext": 1,
+            "Hum_INT": 67.9,
+            "Systimestamp": 1752852342,
+            "TempC_EXT": 327.67,
+            "TempC_INT": -19.69,
+            "TempF_INT": -3.442
+          }
+        },
+        "rx_metadata": [
+          {
+            "gateway_ids": {
+              "gateway_id": "eui-80029cfffedaeba0-01",
+              "eui": "80029CFFFEDAEBA0"
+            },
+            "time": "2025-07-18T15:25:49.477519989Z",
+            "timestamp": 619910131,
+            "rssi": -57,
+            "channel_rssi": -57,
+            "snr": 10.75,
+            "location": {
+              "latitude": 38.9327756055498,
+              "longitude": -94.8234985881987,
+              "source": "SOURCE_REGISTRY"
+            },
+            "uplink_token": "CiUKIwoXZXVpLTgwMDI5Y2ZmZmVkYWViYTAtMDESCIACnP/+2uugEPOnzKcCGgwI/c7pwwYQl+vKgAIguNqXrIWPAQ==",
+            "received_at": "2025-07-18T15:25:49.511161084Z"
+          }
+        ],
+        "settings": {
+          "data_rate": {
+            "lora": {
+              "bandwidth": 125000,
+              "spreading_factor": 7,
+              "coding_rate": "4/5"
+            }
+          },
+          "frequency": "903100000",
+          "timestamp": 619910131,
+          "time": "2025-07-18T15:25:49.477519989Z"
+        },
+        "received_at": "2025-07-18T15:25:49.539548920Z",
+        "consumed_airtime": "0.061696s",
+        "network_ids": {
+          "net_id": "000013",
+          "ns_id": "EC656E0000102DB4",
+          "tenant_id": "eric",
+          "cluster_id": "nam1",
+          "cluster_address": "nam1.cloud.thethings.industries",
+          "tenant_address": "eric.nam1.cloud.thethings.industries"
+        },
+        "last_battery_percentage": {
+          "f_cnt": 32562,
+          "value": 39.130436,
+          "received_at": "2025-07-17T21:25:42.668201047Z"
+        }
+      }
+    },
+    "correlation_ids": [
+      "gs:uplink:01K0F28GK2P904TBYR2FFKPJ3C"
+    ],
+    "origin": "ip-10-22-13-242.us-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0F28GSTH97WHMR9JMNZENKV"
+  },
+  {
+    "name": "as.up.data.receive",
+    "time": "2025-07-18T15:25:49.746103489Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "eui-a840416c81850cd1",
+          "application_ids": {
+            "application_id": "freezers"
+          },
+          "dev_eui": "A840416C81850CD1",
+          "join_eui": "A840410000000100",
+          "dev_addr": "27FD5DB1"
+        }
+      }
+    ],
+    "correlation_ids": [
+      "gs:uplink:01K0F28GK2P904TBYR2FFKPJ3C"
+    ],
+    "origin": "ip-10-22-13-242.us-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0F28GSJ7R89QDX6ASHNBC10"
+  },
+  {
+    "name": "ns.up.data.process",
+    "time": "2025-07-18T15:25:49.744228488Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "eui-a840416c81850cd1",
+          "application_ids": {
+            "application_id": "freezers"
+          },
+          "dev_eui": "A840416C81850CD1",
+          "join_eui": "A840410000000100",
+          "dev_addr": "27FD5DB1"
+        }
+      }
+    ],
+    "data": {
+      "@type": "type.googleapis.com/ttn.lorawan.v3.UplinkMessage",
+      "raw_payload": "QLFd/SeAaX8C+UaH1Tn9ItFfIXN3+m3E",
+      "payload": {
+        "m_hdr": {
+          "m_type": "UNCONFIRMED_UP"
+        },
+        "mic": "d/ptxA==",
+        "mac_payload": {
+          "f_hdr": {
+            "dev_addr": "27FD5DB1",
+            "f_ctrl": {
+              "adr": true
+            },
+            "f_cnt": 32617
+          },
+          "f_port": 2,
+          "frm_payload": "+UaH1Tn9ItFfIXM=",
+          "full_f_cnt": 32617
+        }
+      },
+      "settings": {
+        "data_rate": {
+          "lora": {
+            "bandwidth": 125000,
+            "spreading_factor": 7,
+            "coding_rate": "4/5"
+          }
+        },
+        "frequency": "903100000",
+        "timestamp": 619910131,
+        "time": "2025-07-18T15:25:49.477519989Z"
+      },
+      "rx_metadata": [
+        {
+          "gateway_ids": {
+            "gateway_id": "eui-80029cfffedaeba0-01",
+            "eui": "80029CFFFEDAEBA0"
+          },
+          "time": "2025-07-18T15:25:49.477519989Z",
+          "timestamp": 619910131,
+          "rssi": -57,
+          "channel_rssi": -57,
+          "snr": 10.75,
+          "location": {
+            "latitude": 38.9327756055498,
+            "longitude": -94.8234985881987,
+            "source": "SOURCE_REGISTRY"
+          },
+          "uplink_token": "CiUKIwoXZXVpLTgwMDI5Y2ZmZmVkYWViYTAtMDESCIACnP/+2uugEPOnzKcCGgwI/c7pwwYQl+vKgAIguNqXrIWPAQ==",
+          "received_at": "2025-07-18T15:25:49.511161084Z"
+        }
+      ],
+      "received_at": "2025-07-18T15:25:49.539548920Z",
+      "correlation_ids": [
+        "gs:uplink:01K0F28GK2P904TBYR2FFKPJ3C"
+      ],
+      "device_channel_index": 4,
+      "consumed_airtime": "0.061696s"
+    },
+    "correlation_ids": [
+      "gs:uplink:01K0F28GK2P904TBYR2FFKPJ3C"
+    ],
+    "origin": "ip-10-22-4-13.us-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0F28GSGH3T8DXGGTTAZQRFS"
+  },
+  {
+    "name": "ns.up.data.receive",
+    "time": "2025-07-18T15:25:49.541998999Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "eui-a840416c81850cd1",
+          "application_ids": {
+            "application_id": "freezers"
+          },
+          "dev_eui": "A840416C81850CD1",
+          "join_eui": "A840410000000100",
+          "dev_addr": "27FD5DB1"
+        }
+      }
+    ],
+    "data": {
+      "@type": "type.googleapis.com/ttn.lorawan.v3.UplinkMessage",
+      "raw_payload": "QLFd/SeAaX8C+UaH1Tn9ItFfIXN3+m3E",
+      "payload": {
+        "m_hdr": {
+          "m_type": "UNCONFIRMED_UP"
+        },
+        "mic": "d/ptxA==",
+        "mac_payload": {
+          "f_hdr": {
+            "dev_addr": "27FD5DB1",
+            "f_ctrl": {
+              "adr": true
+            },
+            "f_cnt": 32617
+          },
+          "f_port": 2,
+          "frm_payload": "+UaH1Tn9ItFfIXM=",
+          "full_f_cnt": 32617
+        }
+      },
+      "settings": {
+        "data_rate": {
+          "lora": {
+            "bandwidth": 125000,
+            "spreading_factor": 7,
+            "coding_rate": "4/5"
+          }
+        },
+        "frequency": "903100000",
+        "timestamp": 619910131,
+        "time": "2025-07-18T15:25:49.477519989Z"
+      },
+      "rx_metadata": [
+        {
+          "gateway_ids": {
+            "gateway_id": "eui-80029cfffedaeba0-01",
+            "eui": "80029CFFFEDAEBA0"
+          },
+          "time": "2025-07-18T15:25:49.477519989Z",
+          "timestamp": 619910131,
+          "rssi": -57,
+          "channel_rssi": -57,
+          "snr": 10.75,
+          "location": {
+            "latitude": 38.9327756055498,
+            "longitude": -94.8234985881987,
+            "source": "SOURCE_REGISTRY"
+          },
+          "uplink_token": "CiUKIwoXZXVpLTgwMDI5Y2ZmZmVkYWViYTAtMDESCIACnP/+2uugEPOnzKcCGgwI/c7pwwYQl+vKgAIguNqXrIWPAQ==",
+          "received_at": "2025-07-18T15:25:49.511161084Z"
+        }
+      ],
+      "received_at": "2025-07-18T15:25:49.539548920Z",
+      "correlation_ids": [
+        "gs:uplink:01K0F28GK2P904TBYR2FFKPJ3C"
+      ],
+      "device_channel_index": 4,
+      "consumed_airtime": "0.061696s"
+    },
+    "correlation_ids": [
+      "gs:uplink:01K0F28GK2P904TBYR2FFKPJ3C"
+    ],
+    "origin": "ip-10-22-4-13.us-west-1.compute.internal",
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0F28GK5EEMW55ABYEND2J1V"
+  },
+  {
+    "time": "2025-07-18T15:21:17.372Z",
+    "name": "synthetic.status.filter_disabled",
+    "isError": false,
+    "isSynthetic": true,
+    "unique_id": "synthetic.1752852077372"
+  },
+  {
+    "name": "as.up.data.forward",
+    "time": "2025-07-18T15:05:49.740074745Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "eui-a840416c81850cd1",
+          "application_ids": {
+            "application_id": "freezers"
+          }
+        }
+      }
+    ],
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0F13WXCYBEB6E76RGWSYN9W"
+  },
+  {
+    "name": "ns.up.data.process",
+    "time": "2025-07-18T15:05:49.737213349Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "eui-a840416c81850cd1",
+          "application_ids": {
+            "application_id": "freezers"
+          }
+        }
+      }
+    ],
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0F13WX9VJXV41ERA38SQKJG"
+  },
+  {
+    "name": "as.up.data.forward",
+    "time": "2025-07-18T14:45:49.823591478Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "eui-a840416c81850cd1",
+          "application_ids": {
+            "application_id": "freezers"
+          }
+        }
+      }
+    ],
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0EZZ93Z88Y9WAAH5VPN9X36"
+  },
+  {
+    "name": "ns.up.data.process",
+    "time": "2025-07-18T14:45:49.619049302Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "eui-a840416c81850cd1",
+          "application_ids": {
+            "application_id": "freezers"
+          }
+        }
+      }
+    ],
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0EZZ8XKEX7VE9RMB4167DTE"
+  },
+  {
+    "name": "as.up.data.forward",
+    "time": "2025-07-18T14:25:49.620985305Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "eui-a840416c81850cd1",
+          "application_ids": {
+            "application_id": "freezers"
+          }
+        }
+      }
+    ],
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0EYTN1M602TKE01XQSA38RX"
+  },
+  {
+    "name": "ns.up.data.process",
+    "time": "2025-07-18T14:25:49.487065847Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "eui-a840416c81850cd1",
+          "application_ids": {
+            "application_id": "freezers"
+          }
+        }
+      }
+    ],
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0EYTMXF9W5V5BP03N6379CR"
+  },
+  {
+    "name": "as.up.data.forward",
+    "time": "2025-07-18T14:05:49.220530500Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "eui-a840416c81850cd1",
+          "application_ids": {
+            "application_id": "freezers"
+          }
+        }
+      }
+    ],
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0EXP0S41E36MNWPAM586NF1"
+  },
+  {
+    "name": "ns.up.data.process",
+    "time": "2025-07-18T14:05:49.212364339Z",
+    "identifiers": [
+      {
+        "device_ids": {
+          "device_id": "eui-a840416c81850cd1",
+          "application_ids": {
+            "application_id": "freezers"
+          }
+        }
+      }
+    ],
+    "context": {
+      "tenant-id": "CgRlcmlj"
+    },
+    "visibility": {
+      "rights": [
+        "RIGHT_APPLICATION_TRAFFIC_READ"
+      ]
+    },
+    "unique_id": "01K0EXP0RW6REBRM6W9WBKEEJK"
+  }
+]
