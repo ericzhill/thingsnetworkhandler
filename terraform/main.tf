@@ -74,7 +74,7 @@ resource "aws_s3_bucket_public_access_block" "this" {
 resource "aws_s3_object" "lambda_zip" {
   bucket         = aws_s3_bucket.artifacts.id
   key            = "deployment/lambda.zip"
-  content_base64 = base64encode(data.http.latest_release.response_body)
+  content_base64 = data.http.latest_release.response_body_base64
   content_type   = "application/zip"
 }
 
@@ -107,8 +107,13 @@ resource "aws_cloudwatch_log_group" "lambda" {
   retention_in_days = 14
 }
 
+moved {
+  from = aws_lambda_function.this
+  to   = aws_lambda_function.lambda_handler
+}
+
 # Create the Lambda function from the S3 object
-resource "aws_lambda_function" "this" {
+resource "aws_lambda_function" "lambda_handler" {
   function_name = "${random_pet.prefix.id}-thingsnetworkhandler"
   role          = aws_iam_role.lambda_exec.arn
   runtime       = "provided.al2"
@@ -118,12 +123,10 @@ resource "aws_lambda_function" "this" {
   s3_bucket = aws_s3_bucket.artifacts.id
   s3_key    = aws_s3_object.lambda_zip.key
 
-  # Provide source code hash so updates are detected
-  # source_code_hash = base64sha256(data.http.lambda_zip.response_body)
-
   environment {
     variables = {
-      TZ = "UTC"
+      TZ               = "UTC"
+      DOWNLINK_API_KEY = var.downlink_api_key
     }
   }
 
@@ -131,4 +134,10 @@ resource "aws_lambda_function" "this" {
     aws_iam_role_policy_attachment.cw_logs,
     aws_cloudwatch_log_group.lambda
   ]
+}
+
+# Public Lambda Function URL
+resource "aws_lambda_function_url" "public" {
+  function_name      = aws_lambda_function.lambda_handler.function_name
+  authorization_type = "NONE"
 }
