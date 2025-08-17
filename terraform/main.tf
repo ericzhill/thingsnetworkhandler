@@ -60,7 +60,7 @@ data "http" "latest_release" {
 locals {
   release = jsondecode(data.http.latest_release.response_body)
   # Find the lambda.zip asset from the latest release
-  asset_urls = [for a in local.release.assets : a.browser_download_url if a.name == "lambda.zip"]
+  asset_urls       = [for a in local.release.assets : a.browser_download_url if a.name == "lambda.zip"]
   lambda_asset_url = length(local.asset_urls) > 0 ? local.asset_urls[0] : ""
 
   function_name = "${random_pet.prefix.id}-thingsnetworkhandler"
@@ -101,10 +101,10 @@ resource "aws_s3_bucket_public_access_block" "this" {
 
 # Upload the artifact to S3 using the downloaded body
 resource "aws_s3_object" "lambda_zip" {
-  bucket       = aws_s3_bucket.artifacts.id
-  key          = "${local.function_name}/lambda.zip"
+  bucket         = aws_s3_bucket.artifacts.id
+  key            = "${local.function_name}/lambda.zip"
   content_base64 = base64encode(data.http.lambda_zip.response_body)
-  content_type  = "application/zip"
+  content_type   = "application/zip"
 }
 
 # IAM role for Lambda
