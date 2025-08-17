@@ -50,7 +50,7 @@ variable "github_repo" {
 
 # Discover the latest GitHub release (public API)
 data "http" "latest_release" {
-  url = "https://api.github.com/repos/${var.github_owner}/${var.github_repo}/releases/latest"
+  url = "https://github.com/ericzhill/thingsnetworkhandler/releases/download/v0.0.2/lambda.zip"
 
   request_headers = {
     Accept = "application/vnd.github+json"
