@@ -1,11 +1,8 @@
 name: Build Lambda ZIP
 
 on:
-  push:
-    branches: [ main ]
-    tags: [ "v*" ]
-  pull_request:
-    branches: [ main ]
+  release:
+    types: [ published ]
 
 permissions:
   contents: read
@@ -21,7 +18,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
-          go-version: '1.24.x'
+          go-version: '1.25.x'
           cache: true
 
       - name: Go version
@@ -47,6 +44,6 @@ jobs:
       - name: Upload artifact (lambda.zip)
         uses: actions/upload-artifact@v4
         with:
-          name: lambda-amd64-zip
+          name: lambda-amd64-zip-${{ github.event.release.tag_name }}
           path: dist/lambda.zip
           if-no-files-found: error
