@@ -50,7 +50,7 @@ variable "github_repo" {
 
 # Discover the latest GitHub release (public API)
 data "http" "latest_release" {
-  url = "https://github.com/ericzhill/thingsnetworkhandler/releases/download/v0.0.2/lambda.zip"
+  url = "https://github.com/ericzhill/thingsnetworkhandler/releases/download/${var.deployed_version}/lambda.zip"
 
   request_headers = {
     Accept = "application/vnd.github+json"
@@ -127,6 +127,7 @@ resource "aws_lambda_function" "lambda_handler" {
     variables = {
       TZ               = "UTC"
       DOWNLINK_API_KEY = var.downlink_api_key
+      DEPLOYED_VERSION = var.deployed_version
     }
   }
 
