@@ -103,7 +103,7 @@ resource "aws_iam_role_policy_attachment" "cw_logs" {
 
 # Explicit log group for the Lambda, named with the random pet prefix
 resource "aws_cloudwatch_log_group" "lambda" {
-  name              = "/aws/lambda/${aws_lambda_function.this.function_name}"
+  name              = "/aws/lambda/${random_pet.prefix.id}-thingsnetworkhandler"
   retention_in_days = 14
 }
 
