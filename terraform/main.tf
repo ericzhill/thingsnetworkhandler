@@ -73,7 +73,7 @@ resource "aws_s3_bucket_public_access_block" "this" {
 # Upload the artifact to S3 using the downloaded body
 resource "aws_s3_object" "lambda_zip" {
   bucket         = aws_s3_bucket.artifacts.id
-  key            = "${aws_lambda_function.this.function_name}/lambda.zip"
+  key            = "deployment/lambda.zip"
   content_base64 = base64encode(data.http.latest_release.response_body)
   content_type   = "application/zip"
 }
@@ -131,12 +131,4 @@ resource "aws_lambda_function" "this" {
     aws_iam_role_policy_attachment.cw_logs,
     aws_cloudwatch_log_group.lambda
   ]
-}
-
-output "lambda_function_name" {
-  value = aws_lambda_function.this.function_name
-}
-
-output "cloudwatch_log_group" {
-  value = aws_cloudwatch_log_group.lambda.name
 }
