@@ -119,6 +119,7 @@ resource "aws_lambda_function" "lambda_handler" {
   runtime       = "provided.al2"
   handler       = "bootstrap"
   architectures = ["x86_64"]
+  publish       = true
 
   s3_bucket = aws_s3_bucket.artifacts.id
   s3_key    = aws_s3_object.lambda_zip.key
