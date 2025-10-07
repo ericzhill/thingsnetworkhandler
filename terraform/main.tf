@@ -121,8 +121,9 @@ resource "aws_lambda_function" "lambda_handler" {
   architectures = ["x86_64"]
   publish       = true
 
-  s3_bucket = aws_s3_bucket.artifacts.id
-  s3_key    = aws_s3_object.lambda_zip.key
+  s3_bucket        = aws_s3_bucket.artifacts.id
+  s3_key           = aws_s3_object.lambda_zip.key
+  source_code_hash = aws_s3_object.lambda_zip.source_hash
 
   environment {
     variables = {
@@ -138,8 +139,15 @@ resource "aws_lambda_function" "lambda_handler" {
   ]
 }
 
+resource "aws_lambda_alias" "lambda_handler" {
+  function_name = aws_lambda_function.lambda_handler.function_name
+  function_version = aws_lambda_function.lambda_handler.version
+  name = "latest"
+}
+
 # Public Lambda Function URL
 resource "aws_lambda_function_url" "public" {
   function_name      = aws_lambda_function.lambda_handler.function_name
   authorization_type = "NONE"
+  qualifier = aws_lambda_alias.lambda_handler.name
 }
