@@ -48,7 +48,7 @@ type ttnEvent struct {
 var version string
 
 func Handler(ctx context.Context, req events.LambdaFunctionURLRequest) (events.LambdaFunctionURLResponse, error) {
-	slog.Info("handler startup", "version", version)
+	slog.Info("handler startup", "version", "v"+version)
 
 	// Ensure server is configured
 	if strings.TrimSpace(downlinkAPIKey) == "" {

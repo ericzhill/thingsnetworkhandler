@@ -123,7 +123,7 @@ resource "aws_lambda_function" "lambda_handler" {
 
   s3_bucket        = aws_s3_bucket.artifacts.id
   s3_key           = aws_s3_object.lambda_zip.key
-  source_code_hash = aws_s3_object.lambda_zip.source_hash
+  source_code_hash = aws_s3_object.lambda_zip.checksum_sha256
 
   environment {
     variables = {
@@ -150,4 +150,13 @@ resource "aws_lambda_function_url" "public" {
   function_name      = aws_lambda_function.lambda_handler.function_name
   authorization_type = "NONE"
   qualifier = aws_lambda_alias.lambda_handler.name
+}
+
+resource "local_file" "lambda_downloaded_zip" {
+  filename = "lambda_downloaded.zip"
+  content_base64 = data.http.latest_release.response_body_base64
+}
+
+output "lambda_shasum" {
+  value = filesha256(local_file.lambda_downloaded_zip.filename)
 }
