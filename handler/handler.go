@@ -2,6 +2,7 @@ package handler
 
 import (
 	"context"
+	_ "embed"
 	"encoding/json"
 	"log/slog"
 	"os"
@@ -43,7 +44,12 @@ type ttnEvent struct {
 	EventData   ttnEventData    `json:"data"`
 }
 
+//go:embed version.info
+var version string
+
 func Handler(ctx context.Context, req events.LambdaFunctionURLRequest) (events.LambdaFunctionURLResponse, error) {
+	slog.Info("handler startup", "version", version)
+
 	// Ensure server is configured
 	if strings.TrimSpace(downlinkAPIKey) == "" {
 		slog.Error("DOWNLINK_API_KEY not configured")
