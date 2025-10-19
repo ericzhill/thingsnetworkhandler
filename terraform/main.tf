@@ -48,69 +48,6 @@ variable "github_repo" {
   default     = "thingsnetworkhandler"
 }
 
-# Discover the latest GitHub release (public API)
-data "http" "latest_release" {
-  url = "https://github.com/ericzhill/thingsnetworkhandler/releases/download/${var.deployed_version}/lambda.zip"
-
-  request_headers = {
-    Accept = "application/vnd.github+json"
-  }
-}
-
-# Bucket to stage the Lambda artifact
-resource "aws_s3_bucket" "artifacts" {
-  bucket = lower(replace("${random_pet.prefix.id}-${random_id.bucket_suffix.hex}-lambda-artifacts", "_", "-"))
-}
-
-resource "aws_s3_bucket_public_access_block" "this" {
-  bucket                  = aws_s3_bucket.artifacts.id
-  block_public_acls       = true
-  block_public_policy     = true
-  ignore_public_acls      = true
-  restrict_public_buckets = true
-}
-
-# Upload the artifact to S3 using the downloaded body
-resource "aws_s3_object" "lambda_zip" {
-  bucket         = aws_s3_bucket.artifacts.id
-  key            = "deployment/lambda.zip"
-  content_base64 = data.http.latest_release.response_body_base64
-  content_type   = "application/zip"
-}
-
-# IAM role for Lambda
-resource "aws_iam_role" "lambda_exec" {
-  name = "${random_pet.prefix.id}-thingsnetworkhandler-role"
-  assume_role_policy = jsonencode({
-    Version = "2012-10-17",
-    Statement = [
-      {
-        Action = "sts:AssumeRole",
-        Effect = "Allow",
-        Principal = {
-          Service = "lambda.amazonaws.com"
-        }
-      }
-    ]
-  })
-}
-
-# Attach the basic execution policy that grants CloudWatch Logs permissions
-resource "aws_iam_role_policy_attachment" "cw_logs" {
-  role       = aws_iam_role.lambda_exec.name
-  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
-}
-
-# Explicit log group for the Lambda, named with the random pet prefix
-resource "aws_cloudwatch_log_group" "lambda" {
-  name              = "/aws/lambda/${random_pet.prefix.id}-thingsnetworkhandler"
-  retention_in_days = 14
-}
-
-moved {
-  from = aws_lambda_function.this
-  to   = aws_lambda_function.lambda_handler
-}
 
 # Create the Lambda function from the S3 object
 resource "aws_lambda_function" "lambda_handler" {
@@ -140,23 +77,35 @@ resource "aws_lambda_function" "lambda_handler" {
 }
 
 resource "aws_lambda_alias" "lambda_handler" {
-  function_name = aws_lambda_function.lambda_handler.function_name
+  function_name    = aws_lambda_function.lambda_handler.function_name
   function_version = aws_lambda_function.lambda_handler.version
-  name = "latest"
+  name             = "latest"
 }
 
 # Public Lambda Function URL
 resource "aws_lambda_function_url" "public" {
   function_name      = aws_lambda_function.lambda_handler.function_name
   authorization_type = "NONE"
-  qualifier = aws_lambda_alias.lambda_handler.name
+  qualifier          = aws_lambda_alias.lambda_handler.name
 }
 
-resource "local_file" "lambda_downloaded_zip" {
-  filename = "lambda_downloaded.zip"
-  content_base64 = data.http.latest_release.response_body_base64
+resource "aws_lambda_permission" "allow_public_access" {
+  statement_id           = "FunctionURLAllowPublicAccess"
+  action                 = "lambda:InvokeFunctionUrl"
+  function_name          = aws_lambda_function.lambda_handler.function_name
+  principal              = "*"
+  function_url_auth_type = "NONE"
+  qualifier              = aws_lambda_alias.lambda_handler.name
+}
+
+resource "aws_lambda_permission" "allow_invoke_access" {
+  statement_id  = "FunctionURLAllowInvokeAction"
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.lambda_handler.function_name
+  principal     = "*"
+  qualifier     = aws_lambda_alias.lambda_handler.name
 }
 
 output "lambda_shasum" {
-  value = filesha256(local_file.lambda_downloaded_zip.filename)
+  value = aws_s3_object.lambda_zip.checksum_sha256
 }

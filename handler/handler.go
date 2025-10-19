@@ -76,6 +76,8 @@ func Handler(ctx context.Context, req events.LambdaFunctionURLRequest) (events.L
 		}, nil
 	}
 
+	slog.Info("received downlink", "payload", req.Body, "encoded", req.IsBase64Encoded)
+
 	// Unpack the list of events and process them accordingly
 	var ttnEvents []ttnEvent = make([]ttnEvent, 0)
 	err := json.Unmarshal([]byte(req.Body), &ttnEvents)
